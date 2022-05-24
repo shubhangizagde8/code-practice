@@ -8,6 +8,10 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+
+            //star pattern
+
+
             /*   int k;
                for (k = 1; k <= 10; k++)
                {
@@ -17,6 +21,10 @@ namespace ConsoleApp1
                    }
                    Console.WriteLine("");
                }*/
+
+
+
+            // star pattern
             /* int k;
              for (k = 1; k <= 10; k++)
              {
@@ -63,35 +71,39 @@ namespace ConsoleApp1
 
              }*/
 
-            int k;
-            for (k = 1; k <= 10; k++)
-            {
-                for (int j = 1; j <= 10; j++)
-                {
-                    if (k < j )
-                    {
-                        Console.Write("*");
-                    }
-                    
-
-                }
-
-                Console.WriteLine("");
-            }
-
-            for (k = 1; k <= 10; k++)
-            {
-                for (int j = 1; j <= 10; j++)
-                {
-
-                    if (k > j)
-                        Console.Write("*");
-                }
-
-                Console.WriteLine("");
-            }
 
 
+            //star pattern
+
+            /*  int k;
+              for (k = 1; k <= 10; k++)
+              {
+                  for (int j = 1; j <= 10; j++)
+                  {
+                      if (k < j )
+                      {
+                          Console.Write("*");
+                      }
+
+
+                  }
+
+                  Console.WriteLine("");
+              }
+
+              for (k = 1; k <= 10; k++)
+              {
+                  for (int j = 1; j <= 10; j++)
+                  {
+
+                      if (k > j)
+                          Console.Write("*");
+                  }
+
+                  Console.WriteLine("");
+              }*/
+
+            // Even odd number
 
             /*int b = 10;
           if (b%2==0)
@@ -103,6 +115,8 @@ namespace ConsoleApp1
               Console.WriteLine("number is odd");
           }
 
+
+            // votting age
 
           int c = 64;
           if (c > 18)
@@ -123,7 +137,11 @@ namespace ConsoleApp1
           }
 
           */
-            string ins, rs=string.Empty;
+
+
+            //pallindrome
+
+            /*string ins, rs=string.Empty;
             Console.Write("Enter a string : ");
             ins = Console.ReadLine();
             if (ins != null)
@@ -140,7 +158,109 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("String is not Palindrome");
                 }
+            }*/
+
+
+            //count douplicate number in array
+
+            /*  int[] ar1 = new int[] { 1, 2, 3, 4, 5,3,4,7,9,5 };
+              int i, j,c=0;
+
+              for ( i = 0; i < ar1.Length; i++)
+              {
+                  for (j = i+1; j< ar1.Length; j++)
+                  {
+                      if (ar1[i]==ar1[j])
+                      {
+                          c++;
+                      }
+                  }
+
+              }
+
+              Console.WriteLine("Duplicate numbers : "+c);*/
+
+            //find out second highest number
+
+
+            /*int[] ar1 = new int[] { 20,21,10,4,30,78,32,12};
+            int i, j, c ;
+
+            Console.WriteLine("arry numbers is : " );
+            for (i = 0; i < ar1.Length; i++)
+            {
+                Console.Write(ar1[i] + " ");
             }
+
+            for (i = 0; i < ar1.Length; i++)
+            {
+                for (j = i + 1; j < ar1.Length; j++)
+                {
+                    if (ar1[j]>=ar1[i])
+                    {
+                        c = ar1[i];
+                        ar1[i] = ar1[j];
+                        ar1[j] = c;
+                    }
+                }
+            }
+            Console.WriteLine( " ");
+            Console.Write("second highest number is: "+ar1[1] );
+
+            */
+
+
+            //matrics multiplication
+            int i, j, m, n;
+            int[,] arr1 = new int[2, 2];
+            int[,] arr2 = new int[2, 2];
+            int[,] arr3 = new int[2, 2];
+
+            for (int r = 0; r < 2; r++)
+            {
+                for (int c= 0; c < 2; c++)
+                {
+                    Console.WriteLine("Please enter the value for arr1[" + r + "," + c + "]: ");
+                    arr1[r, c] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            for (int row = 0; row < 2; row++)
+            {
+                for (int col = 0; col < 2; col++)
+                {
+                    Console.WriteLine("Please enter the value for arr2[" + row + "," + col + "]: ");
+                    arr2[row, col] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            for (i = 0; i < 2; i++)
+            {
+                for (j = 0; j < 2; j++)
+                {
+                    arr3[i, j] = 0;
+                    for (int k = 0; k < 2; k++)
+                    {
+                        arr3[i, j] += arr1[i, k] * arr2[k, j];
+                    }
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("MULTIPLICATION OF MATRICS IS: ");
+            Console.WriteLine();
+            for (i = 0; i < 2; i++)
+            {
+                for (j = 0; j < 2; j++)
+                {
+                    Console.Write(arr3[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
             Console.ReadKey();
 
 
