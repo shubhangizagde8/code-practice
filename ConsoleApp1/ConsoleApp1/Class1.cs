@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class Class1
     {
-        static void main1(String[] args)
+        static void main1()
         {
             int k;
             for (k = 0; k >= 10; k++)

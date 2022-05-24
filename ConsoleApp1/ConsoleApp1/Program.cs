@@ -123,7 +123,24 @@ namespace ConsoleApp1
           }
 
           */
-
+            string ins, rs=string.Empty;
+            Console.Write("Enter a string : ");
+            ins = Console.ReadLine();
+            if (ins != null)
+            {
+                for (int i = ins.Length - 1; i >= 0; i--)
+                {
+                    rs += ins[i].ToString();
+                }
+                if (rs == ins)
+                {
+                    Console.WriteLine("String is Palindrome ");
+                }
+                else
+                {
+                    Console.WriteLine("String is not Palindrome");
+                }
+            }
             Console.ReadKey();
 
 
