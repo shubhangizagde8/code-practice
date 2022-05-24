@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\DELL\Desktop\training practice\ConsoleApp1\ConsoleApp1\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\DELL\Desktop\training practice\ConsoleApp1\ConsoleApp1\.editorconfig" />
+  </ItemGroup>
+
 </Project>
