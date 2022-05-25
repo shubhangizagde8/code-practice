@@ -211,6 +211,7 @@ namespace ConsoleApp1
 
 
             //matrics multiplication
+            /*
             int i, j, m, n;
             int[,] arr1 = new int[2, 2];
             int[,] arr2 = new int[2, 2];
@@ -230,7 +231,7 @@ namespace ConsoleApp1
             Console.WriteLine();
             Console.WriteLine();
 
-            /* for (int row = 0; row < 2; row++)
+             for (int row = 0; row < 2; row++)
              {
                  for (int col = 0; col < 2; col++)
                  {
@@ -255,7 +256,10 @@ namespace ConsoleApp1
              Console.WriteLine();
              Console.WriteLine("MULTIPLICATION OF MATRICS IS: ");
              Console.WriteLine();
-            */
+            
+
+
+
             Console.WriteLine();
             Console.WriteLine();
 
@@ -291,6 +295,74 @@ namespace ConsoleApp1
                 for (j = 0; j < 2; j++)
                 {
                     Console.Write(arr2[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }*/
+
+
+
+            // unique number in array
+            /*
+            int n, c = 0;
+            int[] a = new int[100];
+            int i, j, k;
+
+            Console.Write("Enter size of array: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter " + n + " element in array");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("Enter elemeny :");
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.Write("\nThe unique elements  in array  :");
+            for (i = 0; i < n; i++)
+            {
+                c = 0;
+                
+                for (j = 0; j < i - 1; j++)
+                {
+                    
+                    if (a[i] == a[j])
+                    {
+                        c++;
+                    }
+                }
+                
+                for (k = i + 1; k < n; k++)
+                {
+                   
+                    if (a[i] == a[k])
+                    {
+                        c++;
+                    }
+                    
+                    if (a[i] == a[i + 1])
+                    {
+                        i++;
+                    }
+                }
+                
+                if (c== 0)
+                {
+                    Console.Write(" ," + a[i]);
+                }
+            }*/
+
+            int[][] jaggged_array = new int[][]
+            {
+                new int[] { 1,2},
+                new int[] { 1,2,3,4,5},
+                new int[] { 1,2,3,4,5,6,7,8},
+                new int[] { 1,2,3,4,5,6,7,8,9,10}
+            };
+
+            for (int i = 0; i < jaggged_array.Length; i++)
+            {
+                for (int j = 0; j < jaggged_array[i].Length; j++)
+                {
+                    Console.Write(jaggged_array[i][j]);
                 }
                 Console.WriteLine();
             }
