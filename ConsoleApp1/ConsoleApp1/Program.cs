@@ -216,50 +216,86 @@ namespace ConsoleApp1
             int[,] arr2 = new int[2, 2];
             int[,] arr3 = new int[2, 2];
 
+            Console.WriteLine("ENTER 4 VALUE FOR MRATRIX OF: "+"["+"2"+","+"2"+"]");
             for (int r = 0; r < 2; r++)
             {
                 for (int c= 0; c < 2; c++)
                 {
-                    Console.WriteLine("Please enter the value for arr1[" + r + "," + c + "]: ");
+                    Console.WriteLine("ENTER ELEMENT: ");
+                    //Console.WriteLine("Please enter the value for arr1[" + r + "," + c + "]: ");
                     arr1[r, c] = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine();
                 }
             }
             Console.WriteLine();
             Console.WriteLine();
 
-            for (int row = 0; row < 2; row++)
-            {
-                for (int col = 0; col < 2; col++)
-                {
-                    Console.WriteLine("Please enter the value for arr2[" + row + "," + col + "]: ");
-                    arr2[row, col] = Convert.ToInt32(Console.ReadLine());
-                }
-            }
+            /* for (int row = 0; row < 2; row++)
+             {
+                 for (int col = 0; col < 2; col++)
+                 {
+                     Console.WriteLine("Please enter the value for arr2[" + row + "," + col + "]: ");
+                     arr2[row, col] = Convert.ToInt32(Console.ReadLine());
+                 }
+             }
+             Console.WriteLine();
+             Console.WriteLine();
+
+             for (i = 0; i < 2; i++)
+             {
+                 for (j = 0; j < 2; j++)
+                 {
+                     arr3[i, j] = 0;
+                     for (int k = 0; k < 2; k++)
+                     {
+                         arr3[i, j] += arr1[i, k] * arr2[k, j];
+                     }
+                 }
+             }
+             Console.WriteLine();
+             Console.WriteLine("MULTIPLICATION OF MATRICS IS: ");
+             Console.WriteLine();
+            */
             Console.WriteLine();
             Console.WriteLine();
+
+            // transpose of matrix
 
             for (i = 0; i < 2; i++)
             {
                 for (j = 0; j < 2; j++)
                 {
-                    arr3[i, j] = 0;
-                    for (int k = 0; k < 2; k++)
-                    {
-                        arr3[i, j] += arr1[i, k] * arr2[k, j];
-                    }
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("MULTIPLICATION OF MATRICS IS: ");
-            Console.WriteLine();
-            for (i = 0; i < 2; i++)
-            {
-                for (j = 0; j < 2; j++)
-                {
-                    Console.Write(arr3[i, j] + "\t");
+                    Console.Write(arr1[i, j] + "\t");
                 }
                 Console.WriteLine();
             }
+
+            
+            Console.WriteLine();
+
+            for (i = 0; i < 2; i++)
+            {
+                for (j = 0; j < 2; j++)
+                {
+                    arr2[j,i] = arr1[i,j] ;
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("TRANSPOSE OF MATRICS IS: ");
+            Console.WriteLine();
+
+            for (i = 0; i < 2; i++)
+            {
+                for (j = 0; j < 2; j++)
+                {
+                    Console.Write(arr2[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+
 
             Console.ReadKey();
 
