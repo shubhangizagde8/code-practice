@@ -12,7 +12,7 @@ namespace ConsoleApp1
             //star pattern
 
 
-            /*   int k;
+             int k;
                for (k = 1; k <= 10; k++)
                {
                    for (int j = 1; j <= k; j++)
@@ -20,62 +20,10 @@ namespace ConsoleApp1
                        Console.Write("*");
                    }
                    Console.WriteLine("");
-               }*/
+               }
 
 
-
-            // star pattern
-            /* int k;
-             for (k = 1; k <= 10; k++)
-             {
-                 for (int j = 1; j<=10; j++)
-                 {
-
-                     Console.Write(" ");
-                     if (k == j)
-                     {
-                         Console.Write("*");
-                     }
-                     if (j==1)
-                     {
-                         Console.Write("*");
-                     }
-                    else if(j==10)
-                     {
-                         Console.Write("*");
-
-                     }
-                     else if (k==1 &&   j<8)
-                     {
-                         Console.Write("*");
-
-                     }
-                     else if (k==10 && j<8)
-                     {
-                         Console.Write("*");
-
-                     }
-
-                     else if (k+j==11)
-                     {
-                         Console.Write("*");
-
-                     }
-                     else
-                     {
-                         Console.Write("");
-
-                     }
-                 }
-                     Console.WriteLine("");
-
-             }*/
-
-
-
-            //star pattern
-
-            /*  int k;
+           
               for (k = 1; k <= 10; k++)
               {
                   for (int j = 1; j <= 10; j++)
@@ -101,117 +49,188 @@ namespace ConsoleApp1
                   }
 
                   Console.WriteLine("");
-              }*/
-
-            // Even odd number
-
-            /*int b = 10;
-          if (b%2==0)
-          {
-              Console.WriteLine("NUMBER IS EVEN");
-          }
-          else
-              {
-              Console.WriteLine("number is odd");
-          }
-
-
-            // votting age
-
-          int c = 64;
-          if (c > 18)
-          {
-              Console.WriteLine("he can give vote");
-          }
-          if (c > 60)
-          {
-              Console.WriteLine("BUT he is a senior citizen ");
-          }
-          else if (c<18)
-          {
-              Console.WriteLine("he is tin ager ");
-          }
-          else
-          {
-              Console.WriteLine("he can not giev vote");
-          }
-
-          */
-
-
-            //pallindrome
-
-            /*string ins, rs=string.Empty;
-            Console.Write("Enter a string : ");
-            ins = Console.ReadLine();
-            if (ins != null)
-            {
-                for (int i = ins.Length - 1; i >= 0; i--)
-                {
-                    rs += ins[i].ToString();
-                }
-                if (rs == ins)
-                {
-                    Console.WriteLine("String is Palindrome ");
-                }
-                else
-                {
-                    Console.WriteLine("String is not Palindrome");
-                }
-            }*/
-
-
-            //count douplicate number in array
-
-            /*  int[] ar1 = new int[] { 1, 2, 3, 4, 5,3,4,7,9,5 };
-              int i, j,c=0;
-
-              for ( i = 0; i < ar1.Length; i++)
-              {
-                  for (j = i+1; j< ar1.Length; j++)
-                  {
-                      if (ar1[i]==ar1[j])
-                      {
-                          c++;
-                      }
-                  }
-
               }
 
-              Console.WriteLine("Duplicate numbers : "+c);*/
+            
+                 Console.ReadKey();
+              
+     }
+        //star pattern
+        public void stp()
+        {
+             int k;
+                 for (k = 1; k <= 10; k++)
+                 {
+                     for (int j = 1; j<=10; j++)
+                     {
 
-            //find out second highest number
+                         Console.Write(" ");
+                         if (k == j)
+                         {
+                             Console.Write("*");
+                         }
+                         if (j==1)
+                         {
+                             Console.Write("*");
+                         }
+                        else if(j==10)
+                         {
+                             Console.Write("*");
 
+                         }
+                         else if (k==1 &&   j<8)
+                         {
+                             Console.Write("*");
 
-            /*int[] ar1 = new int[] { 20,21,10,4,30,78,32,12};
-            int i, j, c ;
+                         }
+                         else if (k==10 && j<8)
+                         {
+                             Console.Write("*");
 
-            Console.WriteLine("arry numbers is : " );
-            for (i = 0; i < ar1.Length; i++)
+                         }
+
+                         else if (k+j==11)
+                         {
+                             Console.Write("*");
+
+                         }
+                         else
+                         {
+                             Console.Write("");
+
+                         }
+                     }
+                         Console.WriteLine("");
+
+                 }
+
+        }
+
+        // Even odd number
+        public void eo()
+        {
+            int b = 10;
+            if (b % 2 == 0)
             {
-                Console.Write(ar1[i] + " ");
+                Console.WriteLine("NUMBER IS EVEN");
+            }
+            else
+            {
+                Console.WriteLine("number is odd");
             }
 
-            for (i = 0; i < ar1.Length; i++)
+        }
+        // votting age
+
+        public void vta()
+        {
+            int c = 64;
+            if (c > 18)
             {
-                for (j = i + 1; j < ar1.Length; j++)
+                Console.WriteLine("he can give vote");
+            }
+            if (c > 60)
+            {
+                Console.WriteLine("BUT he is a senior citizen ");
+            }
+            else if (c < 18)
+            {
+                Console.WriteLine("he is tin ager ");
+            }
+            else
+            {
+                Console.WriteLine("he can not giev vote");
+            }
+
+        }
+
+        //jagged array
+        public void ag()
+        {
+            //jagged array
+            int[][] jaggged_array = new int[][]
+            {
+                new int[] { 1,2},
+                new int[] { 1,2,3,4,5},
+                new int[] { 1,2,3,4,5,6,7,8},
+                new int[] { 1,2,3,4,5,6,7,8,9,10}
+            };
+
+            for (int i = 0; i < jaggged_array.Length; i++)
+            {
+                for (int j = 0; j < jaggged_array[i].Length; j++)
                 {
-                    if (ar1[j]>=ar1[i])
+                    Console.Write(jaggged_array[i][j]);
+                }
+                Console.WriteLine();
+            }
+
+
+
+
+        }
+
+        //unique number in array
+        public void una()
+        {
+
+            // unique number in array
+            
+            int n, c = 0;
+            int[] a = new int[100];
+            int i, j, k;
+
+            Console.Write("Enter size of array: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter " + n + " element in array");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("Enter elemeny :");
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.Write("\nThe unique elements  in array  :");
+            for (i = 0; i < n; i++)
+            {
+                c = 0;
+                
+                for (j = 0; j < i - 1; j++)
+                {
+                    
+                    if (a[i] == a[j])
                     {
-                        c = ar1[i];
-                        ar1[i] = ar1[j];
-                        ar1[j] = c;
+                        c++;
                     }
                 }
+                
+                for (k = i + 1; k < n; k++)
+                {
+                   
+                    if (a[i] == a[k])
+                    {
+                        c++;
+                    }
+                    
+                    if (a[i] == a[i + 1])
+                    {
+                        i++;
+                    }
+                }
+                
+                if (c== 0)
+                {
+                    Console.Write(" ," + a[i]);
+                }
             }
-            Console.WriteLine( " ");
-            Console.Write("second highest number is: "+ar1[1] );
-
-            */
 
 
+        }
+
+        //matric multiplication and transpose
+        public void mmt()
+        {
             //matrics multiplication
-            /*
+            
             int i, j, m, n;
             int[,] arr1 = new int[2, 2];
             int[,] arr2 = new int[2, 2];
@@ -297,82 +316,83 @@ namespace ConsoleApp1
                     Console.Write(arr2[i, j] + "\t");
                 }
                 Console.WriteLine();
-            }*/
-
-
-
-            // unique number in array
-            /*
-            int n, c = 0;
-            int[] a = new int[100];
-            int i, j, k;
-
-            Console.Write("Enter size of array: ");
-            n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter " + n + " element in array");
-            for (i = 0; i < n; i++)
-            {
-                Console.Write("Enter elemeny :");
-                a[i] = Convert.ToInt32(Console.ReadLine());
             }
-
-            Console.Write("\nThe unique elements  in array  :");
-            for (i = 0; i < n; i++)
-            {
-                c = 0;
-                
-                for (j = 0; j < i - 1; j++)
-                {
-                    
-                    if (a[i] == a[j])
-                    {
-                        c++;
-                    }
-                }
-                
-                for (k = i + 1; k < n; k++)
-                {
-                   
-                    if (a[i] == a[k])
-                    {
-                        c++;
-                    }
-                    
-                    if (a[i] == a[i + 1])
-                    {
-                        i++;
-                    }
-                }
-                
-                if (c== 0)
-                {
-                    Console.Write(" ," + a[i]);
-                }
-            }*/
-
-            int[][] jaggged_array = new int[][]
-            {
-                new int[] { 1,2},
-                new int[] { 1,2,3,4,5},
-                new int[] { 1,2,3,4,5,6,7,8},
-                new int[] { 1,2,3,4,5,6,7,8,9,10}
-            };
-
-            for (int i = 0; i < jaggged_array.Length; i++)
-            {
-                for (int j = 0; j < jaggged_array[i].Length; j++)
-                {
-                    Console.Write(jaggged_array[i][j]);
-                }
-                Console.WriteLine();
-            }
-
-
-
-            Console.ReadKey();
-
-
-
         }
+
+        // find out second highest number
+        public void shna()
+        {
+
+            int[] ar1 = new int[] { 20,21,10,4,30,78,32,12};
+               int i, j, c ;
+
+               Console.WriteLine("arry numbers is : " );
+               for (i = 0; i < ar1.Length; i++)
+               {
+                   Console.Write(ar1[i] + " ");
+               }
+
+               for (i = 0; i < ar1.Length; i++)
+               {
+                   for (j = i + 1; j < ar1.Length; j++)
+                   {
+                       if (ar1[j]>=ar1[i])
+                       {
+                           c = ar1[i];
+                           ar1[i] = ar1[j];
+                           ar1[j] = c;
+                       }
+                   }
+               }
+               Console.WriteLine( " ");
+               Console.Write("second highest number is: "+ar1[1] );
+
+               
+        }
+
+        //count douplicate number in array
+        public void cdna()
+        {
+              int[] ar1 = new int[] { 1, 2, 3, 4, 5,3,4,7,9,5 };
+             int i, j,c=0;
+
+             for ( i = 0; i < ar1.Length; i++)
+             {
+                 for (j = i+1; j< ar1.Length; j++)
+                 {
+                     if (ar1[i]==ar1[j])
+                     {
+                         c++;
+                     }
+                 }
+
+             }
+
+             Console.WriteLine("Duplicate numbers : "+c);
+        }
+
+        //pallindrome
+        public void pal()
+        {
+            string ins, rs=string.Empty;
+            Console.Write("Enter a string : ");
+            ins = Console.ReadLine();
+            if (ins != null)
+            {
+                for (int i = ins.Length - 1; i >= 0; i--)
+                {
+                    rs += ins[i].ToString();
+                }
+                if (rs == ins)
+                {
+                    Console.WriteLine("String is Palindrome ");
+                }
+                else
+                {
+                    Console.WriteLine("String is not Palindrome");
+                }
+            }
+        }
+
     }
 }
