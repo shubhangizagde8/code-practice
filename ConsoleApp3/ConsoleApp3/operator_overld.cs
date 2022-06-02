@@ -30,10 +30,10 @@ namespace ConsoleApp3
     }
     class operator_overld
     {
-        public static void Main()
+        public static void Main4()
         {
-            Calculator calculator1 = new Calculator(5, 2);
-            Calculator calculator2 = new Calculator(2, 2);
+            Calculator calculator1 = new Calculator(15, 20);
+            Calculator calculator2 = new Calculator(20, 20);
             Calculator calculator3 = new Calculator(0, 0);
             calculator3 = calculator1 + calculator2;
             calculator3.Print();
