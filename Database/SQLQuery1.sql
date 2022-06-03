@@ -18,3 +18,24 @@ insert into sample values(4,'Vikash 4');
 delete  from sample where id=1;--deleting rows
 
 update  sample set name='rohit' where id=2;
+
+
+
+
+create proc Addstudent(@Name varchar(200),@DepartmentId int)
+As 
+Begin
+
+insert into student4 values(@Name,@DepartmentId);
+
+END
+
+
+exec dbo.Addstudent 'sham',5
+
+
+create table student4 (id int IDENTITY(1,1),name varchar(200),departmentid int)
+create table department4(id int IDENTITY(1,2),department varchar(20))
+
+select *from student4;
+select *from department4

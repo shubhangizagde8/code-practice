@@ -30,7 +30,7 @@ namespace ConsoleApp3
     }
     class Abstract1
     {
-        public static void Main(String[] args)
+        public static void Main7(String[] args)
         {
             Dog dog = new Dog();
             Console.Write("enter dog name: ");
