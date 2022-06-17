@@ -1,0 +1,56 @@
+<table>
+    <tr>
+        <td>User ID</td>
+        <td>
+            <input [(ngModel)]="UserModel.id" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>User Password</td>
+        <td>
+            <input [(ngModel)]="UserModel.password" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>User Name</td>
+        <td>
+            <input [(ngModel)]="UserModel.name" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>User Gender</td>
+        <td>
+            <input [(ngModel)]="UserModel.gender" type="text">
+        </td>
+    </tr>
+    <input type="submit" (click)="AddUser()">
+    <input type="button" (click)="getData()" value="getData"/>
+</table>
+<!-- {{CustomerModel.CustomerAmount}}
+{{CustomerModel.CustomerName}}
+{{CustomerModel.CustomerCode}} -->
+
+<table border="2">
+    <tr>
+        <td>User ID</td>
+        <td>User Password</td>
+        <td>User Name</td>
+        <td>User Gender</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let item of UserModels">
+        <td>
+            {{item.id}}
+        </td>
+        <td> {{item.password}}
+        </td>
+        <td> {{item.name}}
+        </td>
+        <td> {{item.gender}}
+        </td>
+        <td>
+            <input type="button" value="Edit" (click)="EditUser(item)" />
+            <input type="button" value="Delete" (click)="DeleteUser(item)" />
+        </td>
+    </tr>
+</table>

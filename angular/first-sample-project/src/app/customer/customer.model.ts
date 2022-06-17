@@ -1,5 +1,6 @@
 export class Customer{
-    CustomerName:string='';
-    CustomerCode:string='';
-    CustomerAmount:number=0;
+    id:number=0;
+    customerName:string='';
+    customerCode:string='';
+    customerAmount:number=0;
 }

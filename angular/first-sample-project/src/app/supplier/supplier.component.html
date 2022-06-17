@@ -1,4 +1,4 @@
-<table>
+  <!--  <table>
     <tr>
         <td>Supplier Name</td>
         <td>
@@ -35,6 +35,53 @@
         <td> {{item.SupplierName}}
         </td>
         <td> {{item.SupplierAmount}}
+        </td>
+        <td>
+            <input type="button" value="Edit" (click)="EditngSupplier(item)" />
+            <input type="button" value="Delete" (click)="DeleteSupplier(item)" />
+        </td>
+    </tr>
+</table>  -->
+
+
+<table>
+    <tr>
+        <td>Supplier Name</td>
+        <td>
+            <input [(ngModel)]="SupplierModel.supplierName" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Supplier Code</td>
+        <td>
+            <input [(ngModel)]="SupplierModel.supplierCode" type="text">
+        </td>
+    </tr>
+    <tr>
+        <td>Supplier Amount</td>
+        <td>
+            <input [(ngModel)]="SupplierModel.supplierAmount" type="text">
+        </td>
+    </tr>
+    <input type="submit" (click)="AddSupplier()">
+    <input type="button" (click)="getData()" value="getData"/>
+</table>
+
+
+<table border="2">
+    <tr>
+        <td>Supplier Code</td>
+        <td>Supplier Name</td>
+        <td>Supplier Amount</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let item of SupplierModels">
+        <td>
+            {{item.supplierCode}}
+        </td>
+        <td> {{item.supplierName}}
+        </td>
+        <td> {{item.supplierAmount}}
         </td>
         <td>
             <input type="button" value="Edit" (click)="EditSupplier(item)" />
