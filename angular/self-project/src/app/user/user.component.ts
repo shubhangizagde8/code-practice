@@ -17,22 +17,26 @@ export class UserComponent {
   UserModels: Array<User> = new Array<User>();
   AddUser() {
     console.log(this.UserModel);
-    //this.CustmerModels.push(this.CustomerModel);
+    //this.UserModels.push(this.UserModel);
 
     var Userdto={
-      id:this.UserModel.id,
-      password:this.UserModel.password,
-      name:this.UserModel.name,
-      gender:this.UserModel.gender,
+      ID:this.UserModel.id,
+      Password:this.UserModel.password,
+      Name:this.UserModel.name,
+      Gender:this.UserModel.gender,
      
     }
+    console.log("continue");
     this.httpc.post("https://localhost:44386/api/User",Userdto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
     this.UserModel = new User();
   }
+
   PostSuccess(res:any){
     console.log(res);
     
   }
+ // console.log("yes");
+
   PostError(res:any){
     console.log(res);
   }

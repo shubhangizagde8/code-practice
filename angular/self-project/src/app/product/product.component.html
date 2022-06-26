@@ -1,1 +1,41 @@
-<p>product works!</p>
+
+
+<table >
+    <tr>
+        <td>Product ID</td>
+        <td>
+            <input [(ngModel)]="ProductModel.id" type="text">
+        </td>
+    </tr>
+    
+    <tr>
+        <td>Product Name</td>
+        <td>
+            <input [(ngModel)]="ProductModel.name" type="text">
+        </td>
+    </tr>
+    
+    <input type="submit" (click)="AddProduct()">
+    <input type="button" (click)="getData()" value="getData"/>
+</table>
+
+
+<table border="2">
+    <tr>
+        <td>Product ID</td>
+        <td>Product Name</td>
+        <td>Actions</td>
+    </tr>
+    <tr *ngFor="let item of ProductModels">
+        <td>
+            {{item.id}}
+        </td>
+        
+        <td> {{item.name}}
+        </td>
+        <td>
+            <input type="button" value="Edit" (click)="EditProduct(item)" />
+            <input type="button" value="Delete" (click)="DeleteProduct(item)" />
+        </td>
+    </tr>
+</table>
